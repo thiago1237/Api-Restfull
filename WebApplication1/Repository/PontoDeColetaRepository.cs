@@ -23,8 +23,8 @@ namespace WebApplication1.Repository
         public async Task Add(PontoDeColetaDTO coleta)
         {
             string sql = @"
-            INSERT INTO ponto_de_coleta (Name, Address, Number, Residue)
-                VALUE (@Name, @Address, @Number, @Residue)
+            INSERT INTO ponto_de_coleta (Name, Address, Number, Residue, Bairro_Id)
+                VALUE (@Name, @Address, @Number, @Residue, @Bairro_id)
             ";
             await Execute(sql, coleta);
         }
@@ -43,7 +43,8 @@ namespace WebApplication1.Repository
                 SET NAME =@Name,
                     ADDRESS = @Address,
                     NUMBER = @Number,
-                    RESIDUE = @Residue
+                    RESIDUE = @Residue,
+                    BAIRRO_ID = @Bairro_Id
                 WHERE Id =@id                
              ";
             await Execute(sql, coleta);

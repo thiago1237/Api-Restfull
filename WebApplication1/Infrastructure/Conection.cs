@@ -5,7 +5,7 @@ namespace WebApplication1.Infrastructure
 {
     public class Connection
     {
-        protected string connectionString = "Server=localhost;Database=coletablu;User=root;Password=root;";
+        protected string connectionString = "Server=localhost;Database=coleta_blu;User=root;Password=root;";
         protected MySqlConnection GetConnection()
         {
             return new MySqlConnection(connectionString);
