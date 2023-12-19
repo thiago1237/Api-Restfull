@@ -12,6 +12,8 @@ namespace WebApplication1.Contracts.Repository
         Task <PontoDeColetaEntity> GetById(int id);
         Task <IEnumerable<PontoDeColetaEntity>> Get();
 
+        Task<PontoTokenDTO> LogIn(PontoLoginDTO ponto);
+
     }
     
 }

@@ -59,3 +59,10 @@ C:\Users\thiago.ribeiro2\Desktop\ProjetoPIDB\WebApplication1\WebApplication1\obj
 C:\Users\thiago.ribeiro2\Desktop\ProjetoPIDB\WebApplication1\WebApplication1\obj\Debug\net6.0\WebApplication1.pdb
 C:\Users\thiago.ribeiro2\Desktop\ProjetoPIDB\WebApplication1\WebApplication1\obj\Debug\net6.0\WebApplication1.genruntimeconfig.cache
 C:\Users\thiago.ribeiro2\Desktop\ProjetoPIDB\WebApplication1\WebApplication1\obj\Debug\net6.0\ref\WebApplication1.dll
+C:\Users\thiago.ribeiro2\Desktop\ProjetoPIDB\WebApplication1\WebApplication1\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\thiago.ribeiro2\Desktop\ProjetoPIDB\WebApplication1\WebApplication1\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\thiago.ribeiro2\Desktop\ProjetoPIDB\WebApplication1\WebApplication1\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\thiago.ribeiro2\Desktop\ProjetoPIDB\WebApplication1\WebApplication1\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\thiago.ribeiro2\Desktop\ProjetoPIDB\WebApplication1\WebApplication1\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\thiago.ribeiro2\Desktop\ProjetoPIDB\WebApplication1\WebApplication1\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\thiago.ribeiro2\Desktop\ProjetoPIDB\WebApplication1\WebApplication1\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

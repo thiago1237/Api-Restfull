@@ -49,5 +49,15 @@ namespace WebApplication1.Repository
              ";
             await Execute(sql, coleta);
         }
+
+        public async Task<PontoTokenDTO> LogIn(PontoLoginDTO ponto)
+        {
+            string sql = "SELECT * FROM ponto_de_coleta WHERE Name = @Name AND Number = @Number";
+            PontoDeColetaEntity pontologin = await GetConnection().QueryFirstAsync<PontoDeColetaEntity>(sql, ponto);
+            return new PontoTokenDTO
+            {
+                Token = Authentication.GenerateToken(pontologin)
+            };
+        }
     }
 }
