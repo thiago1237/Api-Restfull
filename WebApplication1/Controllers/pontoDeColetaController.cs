@@ -18,6 +18,7 @@ namespace WebApplication1.Controllers
         {
             return Ok(await _pontoDeColetaRepository.Get());
         }
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -27,20 +28,22 @@ namespace WebApplication1.Controllers
         {
             _pontoDeColetaRepository = pontoDeColetaRepository;
         }
-        [Authorize]
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public async Task<IActionResult> Add(PontoDeColetaDTO coleta)
         {
             await _pontoDeColetaRepository.Add(coleta);
             return Ok();
         }
-        [Authorize]
+
+        [Authorize(Roles = "admin")]
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
             await _pontoDeColetaRepository.Delete(id);
             return Ok();
         }
+
         [Authorize]
         [HttpPut]
         public async Task<IActionResult> Update(PontoDeColetaEntity coleta)

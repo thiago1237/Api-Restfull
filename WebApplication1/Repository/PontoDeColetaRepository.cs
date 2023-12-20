@@ -23,8 +23,8 @@ namespace WebApplication1.Repository
         public async Task Add(PontoDeColetaDTO coleta)
         {
             string sql = @"
-            INSERT INTO ponto_de_coleta (Name, Address, Number, Residue, Bairro_Id)
-                VALUE (@Name, @Address, @Number, @Residue, @Bairro_id)
+            INSERT INTO ponto_de_coleta (Name, Address, Number, Residue, Bairro_Id, Role)
+                VALUE (@Name, @Address, @Number, @Residue, @Bairro_id, @Role)
             ";
             await Execute(sql, coleta);
         }
@@ -45,6 +45,7 @@ namespace WebApplication1.Repository
                     NUMBER = @Number,
                     RESIDUE = @Residue,
                     BAIRRO_ID = @Bairro_Id
+                    Role = @Role
                 WHERE Id =@id                
              ";
             await Execute(sql, coleta);
@@ -53,10 +54,11 @@ namespace WebApplication1.Repository
         public async Task<PontoTokenDTO> LogIn(PontoLoginDTO ponto)
         {
             string sql = "SELECT * FROM ponto_de_coleta WHERE Name = @Name AND Number = @Number";
-            PontoDeColetaEntity pontologin = await GetConnection().QueryFirstAsync<PontoDeColetaEntity>(sql, ponto);
+            PontoDeColetaEntity pontoLogin = await GetConnection().QueryFirstAsync<PontoDeColetaEntity>(sql, ponto);
             return new PontoTokenDTO
             {
-                Token = Authentication.GenerateToken(pontologin)
+                Token = Authentication.GenerateToken(pontoLogin),
+                Coletor  = pontoLogin
             };
         }
     }

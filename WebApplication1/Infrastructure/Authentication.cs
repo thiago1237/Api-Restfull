@@ -17,7 +17,8 @@ namespace WebApplication1.Infrastructure
                 Subject = new ClaimsIdentity(new Claim[]
                 {
                     new Claim(ClaimTypes.MobilePhone, ponto.Number),
-                    new Claim(ClaimTypes.Name, ponto.Name)
+                    new Claim(ClaimTypes.Name, ponto.Name),
+                    new Claim(ClaimTypes.Role, ponto.Role)
 
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
